@@ -28,7 +28,6 @@ import (
 var cfgFile string
 var natsServer string
 
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "nats-cli",
@@ -62,7 +61,7 @@ func init() {
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.nats-cli.yaml)")
 
-	rootCmd.PersistentFlags().StringVar(&natsServer, "Nats Server", "nats://localhost:4222", "Change the Used Server")
+	rootCmd.PersistentFlags().StringVar(&natsServer, "nats", "nats://localhost:4222", "Change the Used Server")
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
